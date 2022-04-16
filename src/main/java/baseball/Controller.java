@@ -9,8 +9,9 @@ public class Controller {
 
     public void playGame() {
         String input = Console.readLine();
-
         validateInput(input);
+
+        userNumber = Integer.parseInt(input);
 
     }
 }

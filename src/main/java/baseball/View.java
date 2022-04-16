@@ -7,27 +7,27 @@ public class View {
     private static final String BALL = "볼";
     private static final String STRIKE = "스트라이크";
 
-    public static void printInputMessage() {
+    static void printInputMessage() {
         System.out.print(INPUT_MSG + " ");
     }
 
-    public static void printEndMessage() {
+    static void printEndMessage() {
         System.out.println(END_MSG);
     }
 
-    public static void printNothing() {
+    static void printNothing() {
         System.out.println(NOTHING);
     }
 
-    public static void printBall(int b) {
+    static void printBall(int b) {
         System.out.println(b + BALL);
     }
 
-    public static void printStrike(int s) {
+    static void printStrike(int s) {
         System.out.println(s + STRIKE);
     }
 
-    public static void printBallAndStrike(int b, int s) {
+    static void printBallAndStrike(int b, int s) {
         System.out.println(b + BALL + " " + s + STRIKE);
     }
 }
