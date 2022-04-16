@@ -3,6 +3,8 @@ package common;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.*;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class StringTest {
@@ -54,5 +56,19 @@ public class StringTest {
                 .isThrownBy(() -> {
                     testStr.charAt(5);
                 }).withMessageContaining("index out of range: 5");
+    }
+
+    @Test
+    void charAt2() {
+        String testStr = "1123";
+        List<Character> chars = new ArrayList<>();
+
+        for (char ch : testStr.toCharArray()) {
+            chars.add(ch);
+        }
+
+        Set<Character> set = new HashSet<>(chars);
+
+        assertThat(set.size()).isEqualTo(3);
     }
 }
