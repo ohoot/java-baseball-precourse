@@ -2,34 +2,34 @@ package baseball;
 
 import org.junit.jupiter.api.Test;
 
-public class ViewTest {
+public class BaseballViewTest {
     @Test
     public void inputTest() {
-        View.printInputMessage();
+        BaseballView.printInputMessage();
     }
 
     @Test
     public void endTest() {
-        View.printEndMessage();
+        BaseballView.printEndMessage();
     }
 
     @Test
     public void nothingTest() {
-        View.printNothing();
+        BaseballView.printNothing();
     }
 
     @Test
     public void ballTest() {
-        View.printBall(3);
+        BaseballView.printBall(3);
     }
 
     @Test
     public void strikeTest() {
-        View.printStrike(2);
+        BaseballView.printStrike(2);
     }
 
     @Test
     public void ballAndStrikeTest() {
-        View.printBallAndStrike(2, 2);
+        BaseballView.printBallAndStrike(2, 2);
     }
 }

@@ -1,22 +1,29 @@
-package baseball;
+package baseball.validator;
 
+import baseball.validator.InputValidator;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class ValidatorTest {
+public class InputValidatorTest {
     @ParameterizedTest
     @ValueSource(strings = {"1233", "1236", "21a", "asd", "108", "445", "1327"})
     void validateWrongInput(String input) {
         assertThatThrownBy(() -> {
-            Validator.validateInput(input);
+            InputValidator.validateInput(input);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"456", "136", "812"})
     void validateCorrectInput(String input) {
-        Validator.validateInput(input);
+        InputValidator.validateInput(input);
+    }
+
+    @Test
+    void validateExit() {
+        InputValidator.validateExit("2");
     }
 }
